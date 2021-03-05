@@ -28,6 +28,7 @@ android:orientation="vertical"
             android:textSize="30dp"
             android:textColor="@color/white"
             android:textStyle="bold"
+            android:id="@+id/txt1"
 
 
             />
@@ -50,6 +51,7 @@ android:orientation="vertical"
             android:textStyle="bold"
             android:layout_marginTop="60dp"
             android:layout_marginLeft="20dp"
+            android:id="@+id/text2"
 
             />
         <Button

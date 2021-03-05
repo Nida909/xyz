@@ -120,7 +120,7 @@
         android:textSize="16dp"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/shape2"
+        android:background="@drawable/shape1"
         android:onClick="PostDetails"
 
         />

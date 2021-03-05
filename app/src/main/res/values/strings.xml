@@ -2,5 +2,13 @@
     <string name="app_name">Chatting</string>
     <string name="selectedlanguage">English</string>
     <string name="language">Select Language of Your Own Choice</string>
-    <string name="myname">Laiba</string>
+    <string name="heading">THE COMPLETE FOOD</string>
+    <string name="question">Hi! Who Are You?</string>
+    <string name="milkman">Milk Man</string>
+    <string name="customer">Customer</string>
+
+
+
+
+
 </resources>

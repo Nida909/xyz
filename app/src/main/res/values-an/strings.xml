@@ -3,5 +3,9 @@
     <string name="app_name">Language Navigation</string>
     <string name="selectedlanguage">اردو</string>
     <string name="language">اپنی پسند کی زبان منتخب کریں</string>
-    <string name="myname"> لائبہ</string>
+    <string name="heading">مکمل غذا</string>
+    <string name="question">سلام! اپ کون ہیں؟</string>
+    <string name="milkman">دودھ والا</string>
+    <string name="customer">گاهک</string>
+
 </resources>
