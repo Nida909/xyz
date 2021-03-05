@@ -16,6 +16,7 @@ public class MainActivity2 extends AppCompatActivity {
     TextView txt1,txt2;
     Context context;
     Resources resources;
+    String str;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +24,8 @@ public class MainActivity2 extends AppCompatActivity {
 
         milkman=findViewById(R.id.milkman);
         customer=findViewById(R.id.customer);
-        txt1=findViewById(R.id.text1);
-        txt2=findViewById(R.id.text2);
+        txt1=findViewById(R.id.txt1);
+        txt2=findViewById(R.id.txt2);
 
 
         Intent intent = getIntent();
@@ -39,6 +40,7 @@ public class MainActivity2 extends AppCompatActivity {
             txt2.setText(resources.getString(R.string.question));
             milkman.setText(resources.getString(R.string.milkman));
             customer.setText(resources.getString(R.string.customer));
+            str="ENGLISH";
 
 
 
@@ -53,6 +55,7 @@ public class MainActivity2 extends AppCompatActivity {
             txt2.setText(resources.getString(R.string.question));
             milkman.setText(resources.getString(R.string.milkman));
             customer.setText(resources.getString(R.string.customer));
+            str="اردو";
 
 
         }
