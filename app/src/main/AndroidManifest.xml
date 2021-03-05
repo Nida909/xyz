@@ -10,7 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chatting"
         android:usesCleartextTraffic="true">
-        <activity android:name=".othersReviews"></activity>
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".othersReviews" />
         <activity android:name=".MilkManList2" />
         <activity android:name=".showReview" />
         <activity android:name=".review" />
