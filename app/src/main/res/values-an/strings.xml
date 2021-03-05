@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Language Navigation</string>
+    <string name="selectedlanguage">اردو</string>
+    <string name="language">اپنی پسند کی زبان منتخب کریں</string>
+    <string name="myname"> لائبہ</string>
+</resources>

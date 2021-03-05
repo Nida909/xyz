@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chatting"
         android:usesCleartextTraffic="true">
+        <activity android:name=".LanguageNavigation"></activity>
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
