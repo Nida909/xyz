@@ -14,7 +14,7 @@
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="We Promise Health"
+    android:text="We promise health"
     android:textSize="30dp"
     android:textStyle="bold"
     android:textColor="@color/white"
@@ -23,7 +23,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="At Your DoorStep"
+        android:text="at your doorstep"
         android:textSize="30dp"
         android:textStyle="bold"
         android:textColor="@color/white"
