@@ -23,7 +23,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    Intent intent=new Intent(WelcomeActivity.this,MainActivity2.class);
+                    Intent intent=new Intent(WelcomeActivity.this,LanguageNavigation.class);
                     startActivity(intent);
                 }
             }
