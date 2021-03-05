@@ -32,6 +32,7 @@
             android:textColor="@color/black"
             android:textSize="25dp"
             android:textStyle="bold"
+            android:id="@+id/txt1"
 
 
 
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:hint="User Name"
             android:inputType="text"
-            android:id="@+id/name"/>
+            android:id="@+id/name" />
         <EditText
 
             android:layout_width="match_parent"
@@ -77,6 +78,7 @@
             android:layout_marginTop="15dp"
             android:textSize="20dp"
             android:gravity="center"
+            android:id="@+id/txt2"
             />
         <Button
             android:layout_width="match_parent"

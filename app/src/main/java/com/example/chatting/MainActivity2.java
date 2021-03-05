@@ -65,6 +65,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity2.this, LogInPage.class));
+                intent.putExtra("language",str);
                 finish();
             }
         });
@@ -73,6 +74,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
       Intent intent=new Intent(MainActivity2.this,SignIn.class);
+                intent.putExtra("language",str);
       startActivity(intent);
 
             }

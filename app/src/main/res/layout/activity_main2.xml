@@ -51,7 +51,7 @@ android:orientation="vertical"
             android:textStyle="bold"
             android:layout_marginTop="60dp"
             android:layout_marginLeft="20dp"
-            android:id="@+id/text2"
+            android:id="@+id/txt2"
 
             />
         <Button

@@ -26,6 +26,8 @@ public class LanguageNavigation extends AppCompatActivity {
         text1=(TextView)findViewById(R.id.text1);
 
 
+
+
         language_dialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

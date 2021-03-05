@@ -7,5 +7,10 @@
     <string name="question">سلام! اپ کون ہیں؟</string>
     <string name="milkman">دودھ والا</string>
     <string name="customer">گاهک</string>
+    <string name="login">لاگ ان کریں</string>
+    <string name="name">صارف کا نام</string>
+    <string name="password">پاس ورڈ</string>
+    <string name="question1">غیر درج شدہ؟</string>
+    <string name="account">اپنا اندراج کروائیں</string>
 
 </resources>

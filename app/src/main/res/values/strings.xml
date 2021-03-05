@@ -6,6 +6,13 @@
     <string name="question">Hi! Who Are You?</string>
     <string name="milkman">Milk Man</string>
     <string name="customer">Customer</string>
+    <string name="login">LOG IN</string>
+    <string name="name">User Name</string>
+    <string name="password">Password</string>
+    <string name="question1">Not Registered?</string>
+    <string name="account">CREATE AN ACCOUNT</string>
+
+
 
 
 
