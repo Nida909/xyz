@@ -23,7 +23,8 @@ public class LogInPage extends AppCompatActivity {
     String val;
     Context context;
     Resources resources;
-    String str;
+    String str,languagess;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +37,7 @@ public class LogInPage extends AppCompatActivity {
         txt1=findViewById(R.id.txt1);
         txt2=findViewById(R.id.txt2);
 
-
-        Intent intent = getIntent();
+       Intent intent = getIntent();
         String languages = intent.getExtras().getString("language");
         Toast.makeText(this, languages, Toast.LENGTH_SHORT).show();
         if(languages.equals("ENGLISH"))
@@ -70,7 +70,6 @@ public class LogInPage extends AppCompatActivity {
 
 
         }
-
 
 
 

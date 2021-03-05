@@ -64,18 +64,18 @@ public class MainActivity2 extends AppCompatActivity {
         milkman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity2.this, LogInPage.class));
+                Intent intent = new Intent(MainActivity2.this, LogInPage.class);
                 intent.putExtra("language",str);
-                finish();
+                startActivity(intent);
             }
         });
 
         customer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-      Intent intent=new Intent(MainActivity2.this,SignIn.class);
-                intent.putExtra("language",str);
-      startActivity(intent);
+      Intent intent1=new Intent(MainActivity2.this,SignIn.class);
+                intent1.putExtra("language",str);
+      startActivity(intent1);
 
             }
         });
