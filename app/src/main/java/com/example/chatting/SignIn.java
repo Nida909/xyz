@@ -1,12 +1,16 @@
 package com.example.chatting;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,11 +19,15 @@ public class    SignIn extends AppCompatActivity {
     SQLiteDatabase db;
     String val1;
     int val2,val3,val4,val5;
+    Button b1,b2;
 
-    TextView tv,tt;
+    TextView tv,tt,txt1;
     EditText t1,t2;
     String str1,str2,str3;
     boolean bo=false;
+    Context context;
+    Resources resources;
+    String str;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +37,44 @@ public class    SignIn extends AppCompatActivity {
         tt=(TextView)findViewById(R.id.txt2);
         t1=(EditText) findViewById(R.id.edt1);
         t2=(EditText) findViewById(R.id.edt2);
+        txt1=findViewById(R.id.tt);
+        b1=findViewById(R.id.btn1);
+        b2=findViewById(R.id.btn2);
+
+        Intent intent = getIntent();
+        String languages = intent.getExtras().getString("language");
+        Toast.makeText(this, languages, Toast.LENGTH_SHORT).show();
+        if(languages.equals("ENGLISH"))
+        {
+
+            context = LocalHelper.setLocale( SignIn.this, "en");
+            resources = context.getResources();
+            txt1.setText(resources.getString(R.string.signinhere));
+            t1.setText(resources.getString(R.string.email));
+            t2.setText(resources.getString(R.string.enteryourpassword));
+            b1.setText(resources.getString(R.string.signin));
+            tv.setText(resources.getString(R.string.question1));
+            b2.setText(resources.getString(R.string.account));
+            str="ENGLISH";
+
+        }
+
+        if(languages.equals("اردو"))
+        {
+            context = LocalHelper.setLocale(SignIn.this, "an");
+            resources = context.getResources();
+            txt1.setText(resources.getString(R.string.signinhere));
+            t1.setText(resources.getString(R.string.email));
+            t2.setText(resources.getString(R.string.enteryourpassword));
+            b1.setText(resources.getString(R.string.signin));
+            tv.setText(resources.getString(R.string.question1));
+            b2.setText(resources.getString(R.string.account));
+            str="اردو";
+
+
+        }
+
+
     }
     public void onbtn1(View v)
     {

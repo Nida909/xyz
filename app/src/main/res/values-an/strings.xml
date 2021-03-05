@@ -12,5 +12,8 @@
     <string name="password">پاس ورڈ</string>
     <string name="question1">غیر درج شدہ؟</string>
     <string name="account">اپنا اندراج کروائیں</string>
-
+    <string name="signinhere"> یہاں سائن ان کریں</string>
+    <string name="email"> اپنا ای میل درج کریں</string>
+    <string name="enteryourpassword"> اپنا پاس ورڈ درج کریں</string>
+    <string name="signin"> سائن ان</string>
 </resources>
