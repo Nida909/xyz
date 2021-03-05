@@ -16,14 +16,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LogInPage extends AppCompatActivity {
     TextView txt1,txt2;
-    Button createaccount;
+    Button createaccount,login;
     EditText name,password;
     DatabaseHelper dbHelper;
     SQLiteDatabase db;
     String val;
     Context context;
     Resources resources;
-    String str,languagess;
+    String str;
 
 
     @Override
@@ -36,6 +36,7 @@ public class LogInPage extends AppCompatActivity {
         password=findViewById(R.id.password);
         txt1=findViewById(R.id.txt1);
         txt2=findViewById(R.id.txt2);
+        login=findViewById(R.id.login);
 
        Intent intent = getIntent();
         String languages = intent.getExtras().getString("language");
@@ -46,6 +47,7 @@ public class LogInPage extends AppCompatActivity {
             context = LocalHelper.setLocale(LogInPage.this, "en");
             resources = context.getResources();
             txt1.setText(resources.getString(R.string.login));
+            login.setText(resources.getString(R.string.login));
             name.setText(resources.getString(R.string.name));
             password.setText(resources.getString(R.string.password));
             txt2.setText(resources.getString(R.string.question1));
@@ -63,6 +65,7 @@ public class LogInPage extends AppCompatActivity {
             resources = context.getResources();
             txt1.setText(resources.getString(R.string.login));
             name.setText(resources.getString(R.string.name));
+            login.setText(resources.getString(R.string.login));
             password.setText(resources.getString(R.string.password));
             txt2.setText(resources.getString(R.string.question1));
             createaccount.setText(resources.getString(R.string.account));
