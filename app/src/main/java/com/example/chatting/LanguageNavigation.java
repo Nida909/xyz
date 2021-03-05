@@ -46,7 +46,7 @@ public class LanguageNavigation extends AppCompatActivity {
                                 Toast.makeText(LanguageNavigation.this,""+which,Toast.LENGTH_SHORT).show();
                                 language_dialog.setText(Language[which]);
                                 lang_selected= Language[which].equals("ENGLISH");
-                                //if user select prefered language as English then
+                                //ager user eng select krey toh
                                 if(Language[which].equals("ENGLISH"))
                                 {
 
@@ -57,7 +57,7 @@ public class LanguageNavigation extends AppCompatActivity {
 
 
                                 }
-                                //if user select prefered language as Hindi then
+
                                 if(Language[which].equals("اردو"))
                                 {
                                     context = LocalHelper.setLocale(LanguageNavigation.this, "an");
@@ -83,7 +83,7 @@ public class LanguageNavigation extends AppCompatActivity {
     public void function(View view)
     {
         Intent intent = new Intent(LanguageNavigation.this, MainActivity2.class);
-        //intent.putExtra("language",str);
+        intent.putExtra("language",str);
         startActivity(intent);
 
     }
