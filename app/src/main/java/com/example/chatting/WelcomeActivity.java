@@ -16,7 +16,7 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try{
-                    sleep(3000);
+                    sleep(4000);
                 }
                 catch (Exception e)
                 {
