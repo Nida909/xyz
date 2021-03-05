@@ -80,7 +80,7 @@ public class LanguageNavigation extends AppCompatActivity {
             }
         });
     }
-    public void func(View view)
+    public void function(View view)
     {
         Intent intent = new Intent(LanguageNavigation.this, MainActivity2.class);
         intent.putExtra("language",str);
