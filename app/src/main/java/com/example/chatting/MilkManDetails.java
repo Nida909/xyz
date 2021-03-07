@@ -58,9 +58,10 @@ t6.setText(s6);
     }
     public void onplace(View v)
     {
-Intent intn=new Intent(this,OrderPage.class);
+Intent intn=new Intent(this,MapsActivity.class);
 intn.putExtra("milkman",str);
 intn.putExtra("customer",str2);
+intn.putExtra("milkmanL",s2);
 startActivity(intn);
     }
     public void onReview(View v)

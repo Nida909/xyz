@@ -24,7 +24,14 @@ public class DatabaseContract {
         public static final String COL_PRICE="Price";
 
     }
-
+    public static abstract class Riders implements BaseColumns {
+        public static final String TABLE_NAME = "Riders";
+        public static final String COL_NAME = "Name";
+        public static final String COL_CONTACT="Contact";
+        public static final String COL_LOCATION="Location";
+        public static final String COL_EMAIL = "Email";
+        public static final String COL_PASSWORD="Password";
+    }
     public static abstract class OrderT implements BaseColumns {
         public static final String TABLE_NAME = "OrderT";
         public static final String COL_PLACED_BY = "PlacedBy";

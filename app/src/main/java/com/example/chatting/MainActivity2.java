@@ -81,7 +81,15 @@ public class MainActivity2 extends AppCompatActivity {
         });
 
     }
+    public void Onrider(View v)
+    {
+        Intent intent=new Intent(MainActivity2.this,RiderSingIn.class);
+        startActivity(intent);
+    }
+    public void Onowner(View v)
+    {
 
+    }
 
 
 

@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".CreateAccount">
-    <ImageButton
-        android:layout_marginTop="10dp"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+    android:background="@drawable/bg"
+    tools:context=".createRaccount">
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/crt"
+        android:src="@drawable/account"
         android:id="@+id/imgbtn"
-        android:background="@color/purple_200"
-        android:layout_marginBottom="30dp"
-        ></ImageButton>
+
+        android:layout_marginBottom="60dp"
+        ></ImageView>
     <EditText
         android:layout_below="@id/imgbtn"
         android:layout_width="350dp"
@@ -72,7 +72,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:hint="Enter Password"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="60dp"
         ></EditText>
     <Button
         android:layout_width="wrap_content"

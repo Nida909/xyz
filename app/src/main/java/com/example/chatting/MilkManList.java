@@ -64,7 +64,7 @@ ImageButton img;
                             s4 = c.getString(3);
                             s3 = String.valueOf(id);
                             Toast.makeText(MilkManList.this, "message222: "+edt.getText().toString(), Toast.LENGTH_LONG).show();
-                            MilkMan mObj = new MilkMan(s1, "Category : " + s4 + ", Loc : " + s2, s3);
+                            MilkMan mObj = new MilkMan(s1, "Category : " + s4 + ", Loc : " + s2,s3);
                             arrayList.add(mObj);
 
                         }

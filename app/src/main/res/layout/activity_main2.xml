@@ -74,6 +74,23 @@ android:orientation="vertical"
 
             />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rider"
+            android:text="Rider"
+            android:layout_marginLeft="20dp"
+            android:onClick="Onrider"
+            ></Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/owner"
+            android:text="Owner"
+            android:layout_marginLeft="20dp"
+            android:onClick="Onowner"
+            ></Button>
+
 
 
     </LinearLayout>

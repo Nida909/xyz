@@ -42,6 +42,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + DatabaseContract.Review.COL_PLACED_BY + " INTEGER NOT NULL, "
             + DatabaseContract.Review.COL_PLACED_TO + " INTEGER,"
             + DatabaseContract.Review.COL_REVIEW+ " TEXT)";
+    private static final String CREATE_TBL_USERS5 = "CREATE TABLE "
+            + DatabaseContract.Riders.TABLE_NAME + " ("
+            + DatabaseContract.Riders._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + DatabaseContract.Riders.COL_NAME + " TEXT NOT NULL, "
+            + DatabaseContract.Riders.COL_CONTACT + " TEXT,"
+            + DatabaseContract.Riders.COL_LOCATION + " TEXT,"
+            + DatabaseContract.Riders.COL_EMAIL + " TEXT,"
+            + DatabaseContract.Riders.COL_PASSWORD+ " TEXT )";
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -52,6 +60,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_TBL_USERS1);
         db.execSQL(CREATE_TBL_USERS3);
         db.execSQL(CREATE_TBL_USERS4);
+        db.execSQL(CREATE_TBL_USERS5);
     }
 
     @Override
