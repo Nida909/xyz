@@ -15,6 +15,9 @@
     <string name="email"> Enter your Email</string>
     <string name="enteryourpassword"> Enter your Password</string>
     <string name="signin"> SignIn</string>
+    <string name="rider">Rider</string>
+    <string name="owner">Owner</string>
+
 
 
 </resources>

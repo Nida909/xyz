@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity2 extends AppCompatActivity {
-    Button milkman,customer;
+    Button milkman,customer,owner,rider;
     TextView txt1,txt2;
     Context context;
     Resources resources;
@@ -24,6 +24,8 @@ public class MainActivity2 extends AppCompatActivity {
 
         milkman=findViewById(R.id.milkman);
         customer=findViewById(R.id.customer);
+        owner=findViewById(R.id.owner);
+        rider=findViewById(R.id.rider);
         txt1=findViewById(R.id.txt1);
         txt2=findViewById(R.id.txt2);
 
@@ -39,7 +41,10 @@ public class MainActivity2 extends AppCompatActivity {
             txt1.setText(resources.getString(R.string.heading));
             txt2.setText(resources.getString(R.string.question));
             milkman.setText(resources.getString(R.string.milkman));
-            customer.setText(resources.getString(R.string.customer));
+            customer.setText("Customer");
+            rider.setText("Rider");
+            owner.setText("Owner");
+
             str="ENGLISH";
 
 
@@ -55,6 +60,8 @@ public class MainActivity2 extends AppCompatActivity {
             txt2.setText(resources.getString(R.string.question));
             milkman.setText(resources.getString(R.string.milkman));
             customer.setText(resources.getString(R.string.customer));
+            rider.setText("Rider");
+            owner.setText("Owner");
             str="اردو";
 
 

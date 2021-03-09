@@ -68,7 +68,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/shape2"
             android:id="@+id/login"
-            android:onClick="onbtn2"
+            android:onClick="onbtn1"
             />
         <TextView
             android:layout_width="match_parent"
@@ -76,6 +76,7 @@
             android:text="Not Registered?"
             android:layout_marginTop="15dp"
             android:textSize="20dp"
+            android:id="@+id/txt2"
             android:gravity="center"
             />
         <Button
@@ -91,6 +92,7 @@
             android:layout_gravity="center"
             android:background="@drawable/shape2"
             android:id="@+id/createaccount"
+            android:onClick="onbtn2"
             />
 
     </LinearLayout>

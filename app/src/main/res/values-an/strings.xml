@@ -16,4 +16,6 @@
     <string name="email"> اپنا ای میل درج کریں</string>
     <string name="enteryourpassword"> اپنا پاس ورڈ درج کریں</string>
     <string name="signin"> سائن ان</string>
+    <string name="rider">ڈرائیور</string>
+    <string name="owner">مالک</string>
 </resources>
