@@ -62,7 +62,7 @@ public class createRaccount extends AppCompatActivity {
 
                 db.close();
 
-                Intent intent = new Intent(this, MilkManList.class);
+                Intent intent = new Intent(this, RiderMain.class);
                 intent.putExtra("val", vall);
                 startActivity(intent);
             }
