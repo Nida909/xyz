@@ -8,13 +8,17 @@ import androidx.fragment.app.FragmentActivity;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -28,9 +32,13 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -46,6 +54,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     Polyline polyline1;
     Polyline polyline2;
     PolylineOptions pp;
+    String str;
+    DatabaseHelper dbHelper;
+    SQLiteDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +64,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         img=(ImageButton) findViewById(R.id.search);
         location=(EditText)findViewById(R.id.searchbar);
         Intent intent=getIntent();
+        dbHelper = new DatabaseHelper(this);
+
         milkman=intent.getStringExtra("milkman");
         customer=intent.getStringExtra("customer");
         milkmanLoc=intent.getStringExtra("milkmanL");
@@ -73,7 +86,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String str=location.getText().toString();
+               str=location.getText().toString();
                 List<Address> addressList=null;
                 if(location!=null || !location.equals(""))
                 {
@@ -162,6 +175,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     public void SelectRider(View v)
     {
+        db = dbHelper.getReadableDatabase();
+        String[] colm={DatabaseContract.Customers.COL_NAME,DatabaseContract.Customers.COL_CONTACT};
+        Cursor c = db.query(DatabaseContract.Customers.TABLE_NAME,colm, DatabaseContract.Customers._ID + "=?", new String[] {customer}
+                , null, null, null, null);
+        if (c.getCount()==0) {
+            Toast.makeText(getApplicationContext(),"No Record exist",Toast.LENGTH_LONG).show();
+        }
+        c.moveToFirst();
+       String s1=c.getString(0);
+        String s2=c.getString(1);
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference ref = database.getReference().child("Orderlocation").child("Location");
 
+
+        Map<String, Object> data = new HashMap<>();
+        data.put("MilkmanLoc", milkmanLoc);
+        data.put("DropOffLoc", str);
+        data.put("CustomerName",s1);
+        data.put("CustomerContact",s2);
+        ref.setValue(data).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                //
+                Log.i("tag", "Location update saved");
+            }
+        });
     }
 }

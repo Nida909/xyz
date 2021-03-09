@@ -25,10 +25,10 @@ public class RiderSingIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rider_sing_in);
         dbHelper = new DatabaseHelper(this);
-        tv=(TextView)findViewById(R.id.txt1);
+      //  tv=(TextView)findViewById(R.id.txt1);
         tt=(TextView)findViewById(R.id.txt2);
-        t1=(EditText) findViewById(R.id.edt1);
-        t2=(EditText) findViewById(R.id.edt2);
+        t1=(EditText) findViewById(R.id.name);
+        t2=(EditText) findViewById(R.id.password);
     }
     public void onbtn1(View v)
     {
@@ -51,7 +51,7 @@ public class RiderSingIn extends AppCompatActivity {
                 tt.setText(str3);
                 tt.setVisibility(View.VISIBLE);
                 db.close();
-                Intent intent = new Intent(RiderSingIn.this, MilkManList.class);
+                Intent intent = new Intent(RiderSingIn.this, RiderMain.class);
                 intent.putExtra("val", str3);
                 startActivity(intent);
             }
