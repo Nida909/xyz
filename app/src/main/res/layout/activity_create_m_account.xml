@@ -25,6 +25,7 @@
         android:textColor="@color/teal_200"
         android:textSize="25dp"
         android:textStyle="bold"
+        android:id="@+id/createaccount"
 
         />
     <TextView
@@ -36,6 +37,7 @@
         android:textStyle="bold"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="15dp"
+        android:id="@+id/details"
 
         />
 
@@ -50,6 +52,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:id="@+id/name"
+
         />
     <EditText
 
@@ -97,6 +100,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="40dp"
         android:onClick="SaveDetails"
+        android:id="@+id/btn"
 
         />
 

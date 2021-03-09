@@ -1,14 +1,18 @@
 package com.example.chatting;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -33,7 +37,11 @@ public class CreateMAccount extends AppCompatActivity {
     EditText name, location, email, password, contact;
     DatabaseHelper dbHelper;
     SQLiteDatabase db;
-
+    Context context;
+    Resources resources;
+    TextView createaccount, details;
+    Button btn;
+    String str;
 
 
 
@@ -49,6 +57,53 @@ public class CreateMAccount extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         contact = findViewById(R.id.contactnumber);
+        createaccount=findViewById(R.id.createaccount);
+        details=findViewById(R.id.details);
+        btn=findViewById(R.id.btn);
+        Intent intent = getIntent();
+        String languages = intent.getExtras().getString("language");
+
+        if(languages.equals("ENGLISH"))
+        {
+
+            context = LocalHelper.setLocale(CreateMAccount.this, "en");
+            resources = context.getResources();
+            createaccount.setText(resources.getString(R.string.account1));
+            details.setText(resources.getString(R.string.details));
+            name.setText(resources.getString(R.string.name1));
+            location.setText(resources.getString(R.string.location));
+            email.setText(resources.getString(R.string.email1));
+            password.setText(resources.getString(R.string.password1));
+            contact.setText(resources.getString(R.string.number));
+            btn.setText(resources.getString(R.string.savedetails));
+
+
+
+
+            str="ENGLISH";
+
+
+
+
+        }
+
+        if(languages.equals("اردو"))
+        {
+            context = LocalHelper.setLocale(CreateMAccount.this, "an");
+            resources = context.getResources();
+            createaccount.setText(resources.getString(R.string.account1));
+            details.setText(resources.getString(R.string.details));
+            name.setText(resources.getString(R.string.name1));
+            location.setText(resources.getString(R.string.location));
+            email.setText(resources.getString(R.string.email1));
+            password.setText(resources.getString(R.string.password1));
+            contact.setText(resources.getString(R.string.number));
+            btn.setText(resources.getString(R.string.savedetails));
+
+            str="اردو";
+
+
+        }
 
 
     }

@@ -17,6 +17,19 @@
     <string name="signin"> SignIn</string>
     <string name="rider">Rider</string>
     <string name="owner">Owner</string>
+    <string name="account1">CREATE ACCOUNT</string>
+    <string name="details">Feed Us With Some Details</string>
+    <string name="name1">enter your name</string>
+    <string name="location">enter your location</string>
+    <string name="email1">enter your email</string>
+    <string name="password1">enter your password</string>
+    <string name="number">  enter your contact number</string>
+    <string name="savedetails"> Save Details</string>
+
+
+
+
+
 
 
 

@@ -41,9 +41,10 @@ public class MainActivity2 extends AppCompatActivity {
             txt1.setText(resources.getString(R.string.heading));
             txt2.setText(resources.getString(R.string.question));
             milkman.setText(resources.getString(R.string.milkman));
-            customer.setText("Customer");
-            rider.setText("Rider");
-            owner.setText("Owner");
+            customer.setText(resources.getString(R.string.customer));
+            rider.setText(resources.getString(R.string.rider));
+            owner.setText(resources.getString(R.string.owner));
+
 
             str="ENGLISH";
 
@@ -60,8 +61,9 @@ public class MainActivity2 extends AppCompatActivity {
             txt2.setText(resources.getString(R.string.question));
             milkman.setText(resources.getString(R.string.milkman));
             customer.setText(resources.getString(R.string.customer));
-            rider.setText("Rider");
-            owner.setText("Owner");
+            rider.setText(resources.getString(R.string.rider));
+            owner.setText(resources.getString(R.string.owner));
+
             str="اردو";
 
 

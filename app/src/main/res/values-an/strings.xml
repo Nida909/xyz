@@ -18,4 +18,12 @@
     <string name="signin"> سائن ان</string>
     <string name="rider">ڈرائیور</string>
     <string name="owner">مالک</string>
+    <string name="account1"> اکاؤنٹ بنائیں</string>
+    <string name="details">ہمیں کچھ تفصیلات بتائیں</string>
+    <string name="name1">اپنا نام درج کریں</string>
+    <string name="location">اپنا مقام درج کریں</string>
+    <string name="email1">اپنا ای میل درج کریں</string>
+    <string name="password1">اپنا پاس ورڈ درج کریں</string>
+    <string name="number">اپنا رابطہ نمبر درج کریں</string>
+    <string name="savedetails"> تفصیلات محفوظ کریں</string>
 </resources>
